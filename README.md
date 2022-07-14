@@ -3,22 +3,20 @@ Microsoft COCO Caption Evaluation
 
 Evaluation codes for MS COCO caption generation.
 
+## Prepare environment
+
+```bash
+conda create -n coco python=2.7 openjdk=8 numpy
+conda activate coco
+sh get_stanford_models.sh
+```
+
 ## Requirements ##
+
 - java 1.8.0
 - python 2.7
 
 ## Files ##
-./
-- cocoEvalCapDemo.py (demo script)
-
-./annotation
-- captions_val2014.json (MS COCO 2014 caption validation set)
-- Visit MS COCO [download](http://mscoco.org/dataset/#download) page for more details.
-
-./results
-- captions_val2014_fakecap_results.json (an example of fake results for running demo)
-- Visit MS COCO [format](http://mscoco.org/dataset/#format) page for more details.
-
 ./pycocoevalcap: The folder where all evaluation codes are stored.
 - evals.py: The file includes COCOEavlCap class that can be used to evaluate results on COCO.
 - tokenizer: Python wrapper of Stanford CoreNLP PTBTokenizer
